@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="x-icon" href="search-icon.png">
+  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <title>Search on Google</title>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</head>
+<body>
+  <div class="main">
+    <img src="out. (2).jpg" alt="Nibir'photo">
+    <h1>CREATED BY NIBIR</h1>
+  <input type="text" class="input" value="" placeholder="Type what you search" autofocus="1">
+  <div class="logo">
+    <box-icon name='search' ></box-icon>
+  </div>
+  <button class="searchbtn" onclick="return validate()"><span>Search on Google</span></button> 
+</div>
+  <script>
+    let input= document.querySelector('.input');
+    let searchbtn= document.querySelector('.searchbtn');
+
+    function validate(){
+      if(input.value ==""){
+        alert("Please type what you want to search.")
+        return false;
+      }
+      else{
+        let url ='https://www.google.com/search?q='+input.value;
+        window.open(url,'_self');
+      }
+        
+    }
+  </script> 
+</body>
+</html>
